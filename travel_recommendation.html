@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/travel_recommendation.css" />
+    <title>Travel Recommendation Website</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <span>✈️</span>
+        <h2>TravelBloom</h2>
+      </div>
+
+      <div class="nav-links">
+        <a href="./travel_recommendation.html">Home</a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact Us</a>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="destinationInput"
+          placeholder="Enter a destination or keyword"
+        />
+        <button id="searchBtn">Search</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </nav>
+
+    <main class="hero">
+      <div class="hero-content">
+        <h1>
+          EXPLORE<br />
+          DREAM<br />
+          DESTINATIONS
+        </h1>
+
+        <p>
+          It encourages exploration of unfamiliar territories, embracing diverse
+          cultures and landscapes, while pursuing the desired destination that
+          captivates the heart and ignites a sense of wonder.
+        </p>
+
+        <button class="book-btn">BOOK NOW</button>
+      </div>
+
+      <div class="social-links">
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </main>
+    <!-- Travel Recommendations -->
+    <section class="recommendations-section">
+      <div id="recommendationResults"></div>
+    </section>
+    <script src="./travel_recommendation.js"></script>
+  </body>
+</html>

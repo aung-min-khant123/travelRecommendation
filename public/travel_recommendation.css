@@ -1,0 +1,586 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("new-york.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+  background-color: #242b31;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-style: italic;
+  color: white;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00a89d;
+}
+
+/* Search area */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  width: 230px;
+  font-size: 14px;
+}
+
+.search-container button {
+  background-color: #008b83;
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #006c66;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .search-container input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .search-container {
+    gap: 5px;
+  }
+
+  .search-container button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+
+/* Homepage introduction */
+.hero {
+  min-height: calc(100vh - 80px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 65, 70, 0.85),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("./travel-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 550px;
+}
+
+.hero-content h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  margin-top: 30px;
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.book-btn {
+  margin-top: 30px;
+  background-color: #008b83;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 14px 35px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: #006b65;
+}
+
+/* Social media links */
+.social-links {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 85vh;
+    padding: 80px 25px 60px 65px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .social-links {
+    left: 15px;
+    gap: 18px;
+  }
+}
+
+
+
+/* About Page Background */
+.about-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 45, 50, 0.88),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("./new-york.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Main About Container */
+.about-container {
+  padding: 70px 8%;
+}
+
+/* About Introduction */
+.about-intro h1 {
+  font-size: clamp(45px, 6vw, 75px);
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 35px;
+}
+
+.about-description {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 25px 30px;
+  border-radius: 10px;
+  max-width: 1100px;
+}
+
+.about-description p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Our Team Section */
+.team-section {
+  margin-top: 80px;
+}
+
+.team-section h2 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Team Member Cards */
+.team-card {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.team-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.team-icon {
+  font-size: 35px;
+}
+
+.team-info h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.team-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Role Button */
+.team-role {
+  background-color: #183f8c;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-container {
+    padding: 50px 5%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about-intro h1 {
+    font-size: 42px;
+  }
+
+  .team-section h2 {
+    font-size: 35px;
+  }
+
+  .team-members {
+    grid-template-columns: 1fr;
+  }
+
+  .about-description {
+    padding: 20px;
+  }
+
+  .about-description p {
+    font-size: 14px;
+  }
+}
+
+
+/* Contact Page Background */
+.contact-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(0, 55, 60, 0.85),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("./new-york.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Contact Container */
+.contact-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 10%;
+}
+
+/* Contact Introduction */
+.contact-intro {
+  flex: 1;
+}
+
+.contact-intro h1 {
+  font-size: clamp(45px, 6vw, 80px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  font-size: 22px;
+  color: #f1f1f1;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 12px;
+
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 15px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #d1d1d1;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00c9bb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #008b83;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #006c66;
+}
+
+/* Tablet Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 6%;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 40px 20px;
+  }
+
+  .contact-intro h1 {
+    font-size: 42px;
+  }
+
+  .contact-intro p {
+    font-size: 18px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+
+/* Recommendations Section */
+.recommendations-section {
+  padding: 40px 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Grid Layout */
+#recommendationResults {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Recommendation Card */
+.recommendation-card {
+  background-color: white;
+  color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Recommendation Images */
+.recommendation-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card Content */
+.recommendation-content {
+  padding: 20px;
+}
+
+.recommendation-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.recommendation-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  #recommendationResults {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card img {
+    height: 220px;
+  }
+}
+
+#recommendationResults {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
