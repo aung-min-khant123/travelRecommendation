@@ -1,5 +1,5 @@
 function fetchTravelData() {
-    fetch("./api/travel_recommendation_api.json")
+    fetch("./assets/api/travel_recommendation_api.json")
         .then((response) => {
             if(!response.ok){   
                 throw new Error(`HTTP error: ${response.status}`);
@@ -35,7 +35,7 @@ async function searchRecommendations() {
   }
 
   try {
-    const response = await fetch("./api/travel_recommendation_api.json");
+    const response = await fetch("./assets/api/travel_recommendation_api.json");
 
     if (!response.ok) {
       throw new Error(`HTTP Error: ${response.status}`);
